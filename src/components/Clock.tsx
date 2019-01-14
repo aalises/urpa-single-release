@@ -32,7 +32,7 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     render() {
       const { days, minutes, hours, seconds } = this.state.time;
 
-      return <div className="columns" style={{paddingTop: '1.3rem'}}>
+      return <div className="columns" style={{paddingTop: '1.3rem', cursor: 'default'}}>
         <div className="box column">
             <div className="title is-4">{`${days}d`}</div>
         </div>

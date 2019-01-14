@@ -20,7 +20,7 @@ export default class Main extends React.Component<any, mainState> {
                         <h1 className="title is-2">
                           El primer single d'Urpa, Circumstancial
                         </h1>
-                        <h2 className="subtitle is-4 has-text-grey">
+                        <h2 style={{paddingTop: '0.7rem'}} className="subtitle is-4 has-text-grey">
                           estarà disponible per escoltar aquí en:
                         </h2>
                         <Clock /> 
