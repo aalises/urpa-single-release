@@ -4,7 +4,7 @@ import { MediaLinks } from '../utils/data';
 
 export default () => {
     return (
-        <div style={{position: 'absolute', bottom: '20', left: '40'}} className="field is-grouped is-grouped-multiline">
+        <div style={{position: 'fixed', bottom: '20', left: '40'}} className="field is-grouped is-grouped-multiline">
             <h2 className="subtitle is-6" style={{paddingTop: '0.4rem', fontFamily: 'monospace'}}>
                 Segueix-nos a:
             </h2>
