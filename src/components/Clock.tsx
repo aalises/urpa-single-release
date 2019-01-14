@@ -7,8 +7,8 @@ interface ClockState {
 }
 
 interface ClockProps {
-    date: Date,
-    updateInterval?: number
+    updateInterval?: number,
+    dateReached: function
 }
 
 export default class Clock extends React.Component<ClockProps, ClockState> {
@@ -22,16 +22,16 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     }
 
     componentDidMount(){
-        setInterval(() => this.setTime(),this.props.updateInterval);
+        if(this.state.time.seconds < 0) this.props.dateReached();
+        else setInterval(() => this.setTime(),this.props.updateInterval);
     }
 
     setTime(){ 
-        this.setState({time: dateDiff(releaseDate)}); 
+        this.setState({time: dateDiff(releaseDate)})
     }
 
     render() {
       const { days, minutes, hours, seconds } = this.state.time;
-
       return <div className="columns" style={{paddingTop: '1.3rem', cursor: 'default'}}>
         <div className="box column">
             <div className="title is-4">{`${days}d`}</div>

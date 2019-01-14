@@ -4,6 +4,14 @@ import { MediaLinks } from '../utils/data';
 import Clock from './Clock';
 export default class Main extends React.Component<any, mainState> {
 
+  state = {
+    dateReached: false
+  }
+
+  dateReached = () => {
+    if(!this.state.dateReached) this.setState({dateReached: true});
+  } 
+
   render() {
     return (
       <section className="hero is-fullheight is-default is-bold">
@@ -17,13 +25,17 @@ export default class Main extends React.Component<any, mainState> {
                         </figure>
                     </div>
                     <div className="column is-6 is-offset-1">
-                        <h1 className="title is-2">
-                          El primer single d'Urpa, Circumstancial
-                        </h1>
-                        <h2 style={{paddingTop: '0.7rem'}} className="subtitle is-4 has-text-grey">
-                          estarà disponible per escoltar aquí en:
-                        </h2>
-                        <Clock /> 
+                        {!this.state.dateReached ? 
+                          <React.Fragment>
+                            <h1 className="title is-2">
+                              El primer single d'Urpa, Circumstancial
+                            </h1>
+                            <h2 style={{paddingTop: '0.7rem'}} className="subtitle is-4 has-text-grey">
+                            estarà disponible per escoltar aquí en:
+                            </h2>
+                            <Clock dateReached={() => this.dateReached()}/> 
+                          </React.Fragment>
+                        : <iframe style={{border: '0'; width: '100%'; height: '120px'}} src="https://bandcamp.com/EmbeddedPlayer/track=2209367951/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://diamantenegro.bandcamp.com/track/club-caribe">Club Caribe by Diamante Negro</a></iframe>}
                         <div>
                         <div style={{position: 'fixed', bottom: '1.4rem', left: '1.4rem'}} className="field is-grouped is-grouped-multiline">
                           <h2 className="subtitle is-6" style={{paddingTop: '0.4rem', fontFamily: 'monospace'}}>
