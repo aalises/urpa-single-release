@@ -40,8 +40,8 @@ export default class Main extends React.Component<any, mainState> {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
+        <Footer />
       </section>)
   }
 }
