@@ -1,0 +1,30 @@
+{
+  "name": "parcel-react-example",
+  "license": "MIT",
+  "staticPath": "public",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "dev": "parcel serve index.html -p 4200",
+    "build": "parcel build index.html --public-url ./",
+    "postbuild": "rsync -r dist/ docs"
+  },
+  "dependencies": {
+    "@types/node": "^10.11.1",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "@types/webpack-env": "^1.13.6",
+    "autoprefixer": "^7.2.1",
+    "bulma": "^0.7.2",
+    "countdown": "^2.6.0",
+    "parcel-bundler": "^1.10.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "tslint": "^5.8.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "parcel-plugin-static-files-copy": "^2.0.0",
+    "sass": "^1.16.0"
+  }
+}
