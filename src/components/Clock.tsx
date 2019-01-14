@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { releaseDate} from "../utils/data"
+import { dateDiff } from "../utils/dateDiff"
 
 interface ClockState {
     time: string
@@ -17,7 +18,7 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     }
 
     state = {
-        time: ''
+        time: dateDiff(releaseDate)
     }
 
     componentDidMount(){
@@ -25,7 +26,7 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     }
 
     setTime(){ 
-        this.setState({time: ''}); 
+        this.setState({time: dateDiff(releaseDate)}); 
     }
 
     render() {

@@ -2,8 +2,6 @@ import * as React from 'react';
 import { MediaLinks } from '../utils/data';
 
 import Clock from './Clock';
-
-
 export default class Main extends React.Component<any, mainState> {
 
   render() {
