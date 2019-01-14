@@ -27,7 +27,7 @@ export default class Main extends React.Component<any, mainState> {
                         <div>
                         <div style={{position: 'fixed', bottom: '1.4rem', left: '1.4rem'}} className="field is-grouped is-grouped-multiline">
                           <h2 className="subtitle is-6" style={{paddingTop: '0.4rem', fontFamily: 'monospace'}}>
-                            Segueixnos a:
+                            Segueix-nos a:
                           </h2>
                           {MediaLinks.map(el => {
                             return (
