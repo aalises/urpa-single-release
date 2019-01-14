@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as countdown from 'countdown';
 import { releaseDate} from "../utils/data"
 
 interface ClockState {
@@ -18,7 +17,7 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     }
 
     state = {
-        time: countdown(releaseDate),
+        time: ''
     }
 
     componentDidMount(){
@@ -26,7 +25,7 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     }
 
     setTime(){ 
-        this.setState({time: countdown(this.props.date)}); 
+        this.setState({time: ''}); 
     }
 
     render() {

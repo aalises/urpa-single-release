@@ -1,11 +1,11 @@
 {
-  "name": "parcel-react-example",
+  "name": "urpa-single-release",
   "license": "MIT",
   "staticPath": "public",
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf dist docs",
     "dev": "parcel serve index.html -p 4200",
-    "build": "parcel build index.html --public-url ./",
+    "build": "parcel build index.html --public-url ./ --no-source-maps",
     "postbuild": "rsync -r dist/ docs"
   },
   "dependencies": {
@@ -15,7 +15,6 @@
     "@types/webpack-env": "^1.13.6",
     "autoprefixer": "^7.2.1",
     "bulma": "^0.7.2",
-    "countdown": "^2.6.0",
     "parcel-bundler": "^1.10.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

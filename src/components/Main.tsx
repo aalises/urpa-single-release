@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { releaseDate, MediaLinks } from '../utils/data';
+import { MediaLinks } from '../utils/data';
 
 import Clock from './Clock';
 
@@ -25,7 +25,7 @@ export default class Main extends React.Component<any, mainState> {
                         <h2 className="subtitle is-4 has-text-grey">
                           estarà disponible per escoltar aquí en:
                         </h2>
-                        <Clock date = {releaseDate} /> 
+                        <Clock /> 
                         <div>
                         <div style={{position: 'fixed', bottom: '1.4rem', left: '1.4rem'}} className="field is-grouped is-grouped-multiline">
                           <h2 className="subtitle is-6" style={{paddingTop: '0.4rem', fontFamily: 'monospace'}}>
