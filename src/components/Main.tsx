@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Footer from "./Footer";
 import Clock from './Clock';
-export default class Main extends React.Component<any, mainState> {
+export default class Main extends React.Component<any, any> {
 
   state = {
     dateReached: false
