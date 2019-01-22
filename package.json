@@ -6,7 +6,8 @@
     "prebuild": "rm -rf dist docs",
     "dev": "parcel serve index.html -p 4200",
     "build": "parcel build index.html --public-url ./ --no-source-maps",
-    "postbuild": "rsync -r dist/ docs"
+    "postbuild": "rsync -r dist/ docs",
+    "now-build": "parcel build index.html --public-url ./ --no-source-maps"
   },
   "dependencies": {
     "@types/node": "^10.11.1",

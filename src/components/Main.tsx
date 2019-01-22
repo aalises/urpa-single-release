@@ -27,7 +27,7 @@ export default class Main extends React.Component<any, any> {
                         {!this.state.dateReached ? 
                           <React.Fragment>
                             <h1 className="title is-2">
-                              El primer single d'Urpa, Circumstancial
+                              El primer single d'URPA, Circumstancial
                             </h1>
                             <h2 style={{paddingTop: '0.7rem'}} className="subtitle is-4 has-text-grey">
                             estarà disponible per escoltar aquí en:

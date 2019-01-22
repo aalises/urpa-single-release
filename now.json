@@ -1,0 +1,8 @@
+{
+    "name": "urpa-single",
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build" }
+      ],
+    "alias": "urpa-single",
+    "version": 2
+}
