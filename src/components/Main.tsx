@@ -34,7 +34,12 @@ export default class Main extends React.Component<any, any> {
                             </h2>
                             <Clock dateReached={() => this.dateReached()}/> 
                           </React.Fragment>
-                        : <iframe style={{border: '0'; width: '100%'; height: '120px'}} src="https://bandcamp.com/EmbeddedPlayer/track=2209367951/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://diamantenegro.bandcamp.com/track/club-caribe">Club Caribe by Diamante Negro</a></iframe>}
+                        : <React.Fragment>
+                            <h1 className="title is-2">
+                              Escolta aquí el primer single d'URPA, Circumstancial
+                            </h1>
+                            <iframe style={{border: "0", width: "100%", height: "120px"}} src="https://bandcamp.com/EmbeddedPlayer/track=1628687982/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://urpaurpaurpa.bandcamp.com/track/circumstancial">Circumstancial by URPA</a></iframe>
+                        </React.Fragment>}
                         <div>
                     </div>
                     </div>
